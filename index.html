@@ -19,7 +19,7 @@
       justify-content:center;
       align-items:center;
 
-      height:100vh;
+      min-height:100vh;
     }
 
     .container{
@@ -28,22 +28,24 @@
       border-radius:20px;
       text-align:center;
 
+      width:350px;
+
       box-shadow:0 0 20px rgba(0,0,0,0.2);
     }
 
     h1{
       color:#333;
-      margin-bottom:20px;
+      margin-bottom:10px;
     }
 
     p{
       color:#666;
-      font-size:18px;
     }
 
     button{
-      margin-top:20px;
-      padding:12px 25px;
+      width:100%;
+      margin-top:15px;
+      padding:12px;
 
       border:none;
       border-radius:10px;
@@ -59,12 +61,6 @@
       background:darkblue;
     }
 
-    #message{
-      margin-top:20px;
-      color:green;
-      font-size:20px;
-    }
-
   </style>
 </head>
 
@@ -72,24 +68,79 @@
 
   <div class="container">
 
-    <h1>Welcome To YaadRakh App</h1>
+    <h1>YaadRakh App</h1>
 
-    <p>This is my first HTML website.</p>
+    <p>All Features Working</p>
 
-    <button onclick="showMessage()">
-      Click Me
+    <button onclick="openGoogle()">
+      Open Google
     </button>
 
-    <h2 id="message"></h2>
+    <button onclick="openCalculator()">
+      Calculator
+    </button>
+
+    <button onclick="openNotes()">
+      Notes
+    </button>
+
+    <button onclick="openReminder()">
+      Reminder
+    </button>
+
+    <button onclick="openLogin()">
+      Login Page
+    </button>
+
+    <button onclick="darkMode()">
+      Dark Mode
+    </button>
 
   </div>
 
   <script>
 
-    function showMessage(){
+    function openGoogle(){
 
-      document.getElementById("message").innerHTML =
-      "App Working Successfully!";
+      window.open("https://google.com");
+
+    }
+
+    function openCalculator(){
+
+      alert("Calculator Opened");
+
+    }
+
+    function openNotes(){
+
+      alert("Notes Opened");
+
+    }
+
+    function openReminder(){
+
+      alert("Reminder Opened");
+
+    }
+
+    function openLogin(){
+
+      let name = prompt("Enter Username");
+
+      if(name){
+
+        alert("Welcome " + name);
+
+      }
+
+    }
+
+    function darkMode(){
+
+      document.body.style.background = "black";
+
+      document.body.style.color = "white";
 
     }
 
